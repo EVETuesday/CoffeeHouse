@@ -48,7 +48,7 @@ namespace CoffeeHouse.Pages.CommonPages
             }
 
             var OneGuest = EFClass.Context.Guest.ToList().Where(i => i.Login == TbLogin.Text).FirstOrDefault();
-            if (OneGuest == null)
+            if (OneGuest != null)
             {
                 MessageBox.Show("Логин занят");
                 return;
@@ -98,3 +98,4 @@ namespace CoffeeHouse.Pages.CommonPages
         }
     }
 }
+//
