@@ -1,0 +1,100 @@
+﻿<Window x:Class="CoffeeHouse.Windows.CommonWindows.AutorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeeHouse.Windows.CommonWindows"
+        mc:Ignorable="d"
+        Title="AutorizationWindow" Height="700" Width="400"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
+        WindowState="Normal">
+    
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\EVE\source\repos\CoffeeHouse\CoffeeHouse\Resourses\Images\JpgFormat\Coffee-beans-seeds_640x1136_iPhone_5_wallpaper.jpg"/>
+        </Grid.Background>
+
+        <Rectangle Stroke="Black"
+                   StrokeThickness="10"/>
+
+
+        <StackPanel Margin="60 50 60 0">
+            <TextBlock Text="Авторизация"
+                       Background="Black"
+                       Height="40"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       TextAlignment="Center"
+                       
+                       Padding="5"/>
+
+            <TextBlock Text="Введите логин:"
+                       Background="Black"
+                       Margin="0 30 0 0"
+                       Height="40"
+                       Foreground="White"
+                       TextAlignment="Center"
+                       Padding="10"/>
+
+            <TextBox   x:Name="TbLogin"
+                       Text="Login"
+                       Background="Black"
+                       Margin="0 5"
+                       Height="40"
+                       FontWeight="Bold"
+                       BorderThickness="0"
+                       Foreground="Gray"
+                       TextAlignment="Center"
+                       Padding="10" GotFocus="TbLogin_GotFocus" LostFocus="TbLogin_LostFocus"/>
+
+
+            <TextBlock Text="Введите пароль:"
+                       Background="Black"
+                       Margin="0 30 0 0"
+                       Height="40"
+                       Foreground="White"
+                       TextAlignment="Center"
+                       Padding="10"/>
+
+            <PasswordBox   x:Name="TbPassword"
+                           
+                           Background="Black"
+                           Margin="0 5"
+                           Height="40"
+                           Foreground="Gray"
+                           Padding="10" 
+                           BorderThickness="0"
+                           Password="Password"
+                           HorizontalContentAlignment="Center" LostFocus="TbPassword_LostFocus" GotFocus="TbPassword_GotFocus"/>
+
+            <Button Style="{DynamicResource ButtonStyleRedius}"
+                    x:Name="BtnGo"
+                    Height="50"
+                    Margin="30 100 30 0"
+                    Background="Black"
+                    Content="Войти"
+                    FontSize="20"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    BorderThickness="1"
+                    BorderBrush="White" Click="BtnGo_Click"/>
+
+
+            <Button 
+                x:Name="BtnToReg"
+                Content="Нет аккаунта? Регистрация"
+                   Background="Black"
+                   Foreground="White"
+                   HorizontalContentAlignment="Center"
+                    BorderThickness="1"
+                    BorderBrush="White"
+                   Margin="0 140"
+                   Style="{DynamicResource ButtonStyleRedius}" Click="BtnToReg_Click"
+                   />
+
+        </StackPanel>
+    </Grid>
+</Window>
