@@ -56,8 +56,8 @@ namespace CoffeeHouse.Pages.CommonPages
 
             DataBase.Guest guest = new DataBase.Guest();
             guest.Login = TbLogin.Text;
-            guest.Name = TbLogin.Text;
-            guest.Password = TbLogin.Text;
+            guest.Name = TbName.Text;
+            guest.Password = TbPassword.Text;
             guest.IDGender = (CbGender.SelectedItem as DataBase.Gender).IDGender;
             if (!string.IsNullOrEmpty(TbEmail.Text))
             {

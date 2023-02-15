@@ -11,7 +11,7 @@
         Title="MainChoiseWindow" Height="700" Width="400">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\EVE\source\repos\CoffeeHouse\CoffeeHouse\Resourses\Images\PngFormat\143-1435882_png-coffee-beans-falling-transparent-png.png"/>
+            <ImageBrush ImageSource="C:\Users\EVE\source\repos\CoffeeHouse\CoffeeHouse\Resourses\Images\JpgFormat\jfv.jpg"/>
         </Grid.Background>
 
         <Rectangle Stroke="Black"
