@@ -27,3 +27,4 @@
 <b> Регистрация - Добавление в бд </b>
 ![изображение](https://user-images.githubusercontent.com/114149936/218970522-1e0b5dd6-d4aa-4331-9d6a-5c21e7dd5482.png)
 ![изображение](https://user-images.githubusercontent.com/114149936/218970971-599257d9-1f2d-40ae-8a4f-fff94ea96647.png)
+![изображение](https://user-images.githubusercontent.com/114149936/218972332-6c5212ea-c3f2-45c4-9852-65c805af1f56.png)
