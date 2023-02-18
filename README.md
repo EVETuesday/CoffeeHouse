@@ -29,3 +29,9 @@
 ![изображение](https://user-images.githubusercontent.com/114149936/218975170-3205981d-f9ce-4633-bcd2-15f3ae905ba6.png)
 
 
+<b> Добавление в бд Нового продукта </b>
+![изображение](https://user-images.githubusercontent.com/114149936/219820815-b6b6aaf1-5167-4826-8875-e717b07a9020.png)
+![изображение](https://user-images.githubusercontent.com/114149936/219820842-25e64bdc-9f2c-4821-82a6-dabfeb67638a.png)
+![изображение](https://user-images.githubusercontent.com/114149936/219820898-92046391-382b-469a-9226-9d36c74182f3.png)
+
+
