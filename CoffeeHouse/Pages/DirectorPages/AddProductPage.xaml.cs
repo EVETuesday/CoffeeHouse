@@ -82,8 +82,7 @@ namespace CoffeeHouse.Pages.DirectorPages
             {
                 MessageBox.Show("Все поля с * должны быть заполнены");
                 return;
-            }
-            
+            }            
             
             EFClass.Context.Stuff.Add(product);
             EFClass.Context.SaveChanges();
