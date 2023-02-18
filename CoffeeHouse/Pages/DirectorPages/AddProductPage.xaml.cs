@@ -31,7 +31,7 @@ namespace CoffeeHouse.Pages.DirectorPages
             InitializeComponent();
             CMBTypeProduct.ItemsSource = EFClass.Context.Category.ToList();
             CMBTypeProduct.SelectedIndex = 0;
-            CMBTypeProduct.DisplayMemberPath = "TypeName";
+            CMBTypeProduct.DisplayMemberPath = "Title";
         }
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
@@ -62,8 +62,15 @@ namespace CoffeeHouse.Pages.DirectorPages
             }
             catch
             {
-                MessageBox.Show("Дата указана не верно");
-                return;
+                if (string.IsNullOrEmpty(TbExpiration.Text))
+                {
+                    product.ExpirationDate = null;
+                }
+                else
+                {
+                    MessageBox.Show("Дата указана не верно");
+                    return;
+                }               
             }
 
             if (TbExpiration.Text=="")
@@ -76,6 +83,7 @@ namespace CoffeeHouse.Pages.DirectorPages
                 MessageBox.Show("Все поля с * должны быть заполнены");
                 return;
             }
+            
             
             EFClass.Context.Stuff.Add(product);
             EFClass.Context.SaveChanges();

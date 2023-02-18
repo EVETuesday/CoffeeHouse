@@ -10,10 +10,7 @@
         WindowStartupLocation="CenterScreen"
         Title="DefaultDirectorWindow" Height="700" Width="400">
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\EVE\source\repos\CoffeeHouse\CoffeeHouse\Resourses\Images\JpgFormat\samye-nizkokalorijnye-produkty-48.jpg"/>
-        </Grid.Background>
-        
+
         <Frame x:Name="DirectorFrame"
                
                 NavigationUIVisibility="Hidden"/>
