@@ -334,6 +334,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resourses\Images\JpgFormat\1614414667_11-p-chashka-kofe-na-temnom-fone-17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DataBase\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -344,7 +347,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resourses\Images\JpgFormat\1614414667_11-p-chashka-kofe-na-temnom-fone-17.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

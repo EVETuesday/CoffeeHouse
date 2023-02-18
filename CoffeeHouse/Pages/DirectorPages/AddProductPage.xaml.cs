@@ -49,7 +49,7 @@ namespace CoffeeHouse.Pages.DirectorPages
             product.IDCategory = (CMBTypeProduct.SelectedItem as Category).IDCategory;
             if (pathPhoto != null)
             {
-                product.Image = pathPhoto;
+                product.Image = File.ReadAllBytes(pathPhoto);
             }
             else
             {
@@ -97,8 +97,16 @@ namespace CoffeeHouse.Pages.DirectorPages
 
             if (openFileDialog.ShowDialog() == true)
             {
-                ImgProduct.Source = new BitmapImage(new Uri(openFileDialog.FileName));
-                pathPhoto = openFileDialog.FileName;
+                try
+                {
+                    ImgProduct.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+                    pathPhoto = openFileDialog.FileName;
+                }
+                catch
+                {
+                    MessageBox.Show("Изоображение имеет неверный формат");
+                }
+                
             }
         }
     }
