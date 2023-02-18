@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeeHouse.Windows.Director"
         mc:Ignorable="d"
-        Title="DefaultDirectorWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen"
+        Title="DefaultDirectorWindow" Height="700" Width="400">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\EVE\source\repos\CoffeeHouse\CoffeeHouse\Resourses\Images\JpgFormat\samye-nizkokalorijnye-produkty-48.jpg"/>
+        </Grid.Background>
         
+        <Frame x:Name="DirectorFrame"
+               
+                NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

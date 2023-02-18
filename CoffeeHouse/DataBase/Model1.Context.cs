@@ -15,10 +15,10 @@ namespace CoffeeHouse.DataBase
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Entities : DbContext
+    public partial class Entities2 : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public Entities2()
+            : base("name=Entities2")
         {
         }
     
@@ -44,17 +44,17 @@ namespace CoffeeHouse.DataBase
         public virtual DbSet<VW_TheBiggestGuest> VW_TheBiggestGuest { get; set; }
         public virtual DbSet<VW_WorkShiftEmploee> VW_WorkShiftEmploee { get; set; }
     
-        [DbFunction("Entities", "UDF_GetLevelGuest")]
+        [DbFunction("Entities2", "UDF_GetLevelGuest")]
         public virtual IQueryable<UDF_GetLevelGuest_Result> UDF_GetLevelGuest(Nullable<int> lvl)
         {
             var lvlParameter = lvl.HasValue ?
                 new ObjectParameter("Lvl", lvl) :
                 new ObjectParameter("Lvl", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<UDF_GetLevelGuest_Result>("[Entities].[UDF_GetLevelGuest](@Lvl)", lvlParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<UDF_GetLevelGuest_Result>("[Entities2].[UDF_GetLevelGuest](@Lvl)", lvlParameter);
         }
     
-        [DbFunction("Entities", "UDF_SupplyDate")]
+        [DbFunction("Entities2", "UDF_SupplyDate")]
         public virtual IQueryable<UDF_SupplyDate_Result> UDF_SupplyDate(Nullable<System.DateTime> sDate, Nullable<System.DateTime> eDate)
         {
             var sDateParameter = sDate.HasValue ?
@@ -65,7 +65,7 @@ namespace CoffeeHouse.DataBase
                 new ObjectParameter("eDate", eDate) :
                 new ObjectParameter("eDate", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<UDF_SupplyDate_Result>("[Entities].[UDF_SupplyDate](@sDate, @eDate)", sDateParameter, eDateParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<UDF_SupplyDate_Result>("[Entities2].[UDF_SupplyDate](@sDate, @eDate)", sDateParameter, eDateParameter);
         }
     
         public virtual ObjectResult<PR_getStuffExpirationDate_Result> PR_getStuffExpirationDate(Nullable<int> aTime, Nullable<int> bTime)

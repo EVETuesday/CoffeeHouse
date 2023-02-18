@@ -92,6 +92,7 @@
           <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
           <Property Name="ExpirationDate" Type="int" />
+          <Property Name="Image" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="StuffList">
           <Key>
@@ -655,6 +656,7 @@
           <Property Name="Price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Count" Type="Int32" Nullable="false" />
           <Property Name="ExpirationDate" Type="Int32" />
+          <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Stuff_Category" FromRole="Stuff" ToRole="Category" />
           <NavigationProperty Name="StuffList" Relationship="Self.FK_StuffList_Stuff" FromRole="Stuff" ToRole="StuffList" />
           <NavigationProperty Name="Supply" Relationship="Self.StuffSupply" FromRole="Stuff" ToRole="Supply" />
@@ -882,7 +884,7 @@
           <End Role="Stuff" Type="Self.Stuff" Multiplicity="*" />
           <End Role="Supply" Type="Self.Supply" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Check" EntityType="Self.Check" />
           <EntitySet Name="Emploee" EntityType="Self.Emploee" />
@@ -1003,6 +1005,7 @@
           <Property Type="Decimal" Name="Price" Nullable="false" Precision="10" Scale="2" />
           <Property Type="Int32" Name="Count" Nullable="false" />
           <Property Type="Int32" Name="ExpirationDate" Nullable="true" />
+          <Property Type="String" Name="Image" Nullable="true" MaxLength="200" />
         </ComplexType>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -1020,7 +1023,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище KoffeeHouseModelContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище KoffeeHouseModelContainer" CdmEntityContainer="Entities2">
           <EntitySetMapping Name="Category">
             <EntityTypeMapping TypeName="KoffeeHouseModel.Category">
               <MappingFragment StoreEntitySet="Category">
@@ -1106,6 +1109,7 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1255,6 +1259,7 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

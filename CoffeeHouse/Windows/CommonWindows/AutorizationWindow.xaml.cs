@@ -1,4 +1,5 @@
 ﻿using CoffeeHouse.ClassHelper;
+using CoffeeHouse.Windows.Director;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,8 +40,8 @@ namespace CoffeeHouse.Windows.CommonWindows
             var OneGuest = EFClass.Context.Guest.ToList().Where(i=>i.Login==TbLogin.Text && i.Password==TbPassword.Password).FirstOrDefault();
             if (OneGuest!=null)
             {
-                MainChoiseWindow mainChoiseWindow = new MainChoiseWindow();
-                mainChoiseWindow.Show();
+                DefaultDirectorWindow defaultDirectorWindow = new DefaultDirectorWindow();
+                defaultDirectorWindow.Show();
                 Close();
             }
             else

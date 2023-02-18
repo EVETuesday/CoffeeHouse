@@ -18,6 +18,7 @@
                    StrokeThickness="10"/>
         <Frame Margin="20"
                x:Name="FrameRegistration"
+               NavigationUIVisibility="Hidden"
                />
     </Grid>
 </Window>

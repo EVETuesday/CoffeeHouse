@@ -9,6 +9,6 @@ namespace CoffeeHouse.ClassHelper
 {
     public class EFClass
     {
-        public static Entities Context { get;} = new Entities();
+        public static Entities2 Context { get;} = new Entities2();
     }
 }

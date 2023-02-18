@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7f8aa38bffc74a7ebc129cadd6f30f56" Name="Diagram1" ZoomLevel="74">
-        <EntityTypeShape EntityType="KoffeeHouseModel.Category" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.Check" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.Emploee" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.Gender" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.Guest" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.LevelDiscount" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.Post" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+      <Diagram DiagramId="688e3308976a42aa996d7d48a71fd1c9" Name="Diagram1">
+        <EntityTypeShape EntityType="KoffeeHouseModel.Category" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.Check" Width="1.5" PointX="8.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.Emploee" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.Gender" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.Guest" Width="1.5" PointX="6" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.LevelDiscount" Width="1.5" PointX="3.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.Post" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="KoffeeHouseModel.Stuff" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.StuffList" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.Supplier" Width="1.5" PointX="8.25" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.Supply" Width="1.5" PointX="10.5" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.WorkShift" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.VW_LevelDiscountGuest" Width="1.5" PointX="7.75" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.VW_TheBiggestGuest" Width="1.5" PointX="10.75" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="KoffeeHouseModel.VW_WorkShiftEmploee" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.StuffList" Width="1.5" PointX="10.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.Supplier" Width="1.5" PointX="8.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.Supply" Width="1.5" PointX="10.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.WorkShift" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.VW_LevelDiscountGuest" Width="1.5" PointX="10.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.VW_TheBiggestGuest" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="KoffeeHouseModel.VW_WorkShiftEmploee" Width="1.5" PointX="2.75" PointY="13" IsExpanded="true" />
         <AssociationConnector Association="KoffeeHouseModel.FK_Stuff_Category" ManuallyRouted="false" />
         <AssociationConnector Association="KoffeeHouseModel.FK_Check_Emploee" ManuallyRouted="false" />
         <AssociationConnector Association="KoffeeHouseModel.FK_Check_Guest" ManuallyRouted="false" />
