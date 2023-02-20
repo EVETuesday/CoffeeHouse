@@ -7,11 +7,16 @@
 
 
 
+
 <b> Структура проекта </b>
+
+
 ![изображение](https://user-images.githubusercontent.com/114149936/218969245-c6118660-b438-44b3-8a9a-de7ea45c929f.png)
 
 
 ![изображение](https://user-images.githubusercontent.com/114149936/218969308-c8c78c73-a83c-4328-a78c-0f1cbe94b9fa.png)
+
+
 
 
 
@@ -22,11 +27,18 @@
 
 
 
+
+
 <b> Авторизация </b>
+
+
 ![изображение](https://user-images.githubusercontent.com/114149936/218969778-1325870c-3fca-4dd1-9eb1-b439816192aa.png)
 
 
 ![изображение](https://user-images.githubusercontent.com/114149936/218969840-86adadde-9dcb-46fd-b25f-9a9183ae4488.png)
+
+
+
 
 
 <b> Регистрация XAML </b>
@@ -47,6 +59,9 @@
 ![изображение](https://user-images.githubusercontent.com/114149936/218970156-6b5e56e3-d2da-49c9-bc17-616e65435477.png)
 
 
+
+
+
 <b> Регистрация - Добавление в бд </b>
 
 
@@ -60,6 +75,7 @@
 
 
 
+
 <b> Добавление в бд Нового продукта </b>
 
 
@@ -70,6 +86,9 @@
 
 
 ![изображение](https://user-images.githubusercontent.com/114149936/219850191-1540bba6-10c2-4439-a0a8-a16d3f69caaf.png)
+
+
+
 
 
 <b> Вывод списока продуктов </b>
