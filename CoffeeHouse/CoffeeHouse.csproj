@@ -347,6 +347,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resourses\Images\JpgFormat\stuff.jpg" />
+    <Resource Include="Resourses\Images\JpgFormat\1643206050_60-phonoteka-org-p-fon-iz-dereva-70.jpg" />
+    <Resource Include="Resourses\Images\JpgFormat\bio_no_image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

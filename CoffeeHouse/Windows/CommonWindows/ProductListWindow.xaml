@@ -5,8 +5,81 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeeHouse.Windows.CommonWindows"
         mc:Ignorable="d"
-        Title="ProductListWindow" Height="450" Width="800">
+        Title="ProductListWindow" Height="800" Width="1200">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="\Resourses\Images\JpgFormat\stuff.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Список товаров"
+                   HorizontalAlignment="Center"
+                   FontSize="25"
+                   FontWeight="Bold"/>
+        <ListView x:Name="LvProductList"
+                  Grid.Row="2" d:ItemsSource="{d:SampleData ItemCount=5}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="Transparent">
+            <!--Табличный вывод-->
+            <!--<ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title" Width="100"/>
+                </GridView>
+            </ListView.View>-->
+
+            <!--Плиточный вывод-->
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        BorderBrush="Black"
+                        BorderThickness="1"
+                        Margin="5"
+                        Width="200"
+                        Height="250">
+                        <StackPanel>
+                            <Image Height="170"
+                                   Width="200">
+                                <Image.Source>
+                                    <Binding Path="Image">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>
+                                                \Resourses\Images\JpgFormat\bio_no_image.jpg
+                                            </ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                                
+                            </Image>
+                            <TextBlock Text="{Binding Title}"
+                                       FontSize="10"
+                                       TextWrapping="Wrap"
+                                       FontWeight="Bold"
+                                       Margin="10 0 0 0"/>
+                            <TextBlock Text="{Binding Price}"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Margin="10 0 0 0"/>
+                            <TextBlock Text="{Binding Count}"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Margin="10 0 0 0"/>
+                            <TextBlock Text="{Binding Category.Title}"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Margin="10 0 0 0"/>
+                        </StackPanel>
+                    </Border>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Window>
