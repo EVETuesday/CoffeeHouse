@@ -43,7 +43,7 @@
                         BorderThickness="1"
                         Margin="5"
                         Width="200"
-                        Height="250">
+                        Height="220">
                         <StackPanel>
                             <Image Height="170"
                                    Width="200">
@@ -64,10 +64,6 @@
                                        FontWeight="Bold"
                                        Margin="10 0 0 0"/>
                             <TextBlock Text="{Binding Price}"
-                                       FontSize="10"
-                                       FontWeight="Bold"
-                                       Margin="10 0 0 0"/>
-                            <TextBlock Text="{Binding Count}"
                                        FontSize="10"
                                        FontWeight="Bold"
                                        Margin="10 0 0 0"/>
