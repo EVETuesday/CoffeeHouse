@@ -1,5 +1,4 @@
-﻿using CoffeeHouse.Pages.CommonPages;
-using CoffeeHouse.Pages.DirectorPages;
+﻿using CoffeeHouse.Pages.DirectorPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,17 +13,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace CoffeeHouse.Windows.Director
+namespace CoffeeHouse.Windows.ManagerWindows
 {
     /// <summary>
-    /// Логика взаимодействия для DefaultDirectorWindow.xaml
+    /// Логика взаимодействия для FunctionProduct.xaml
     /// </summary>
-    public partial class DefaultDirectorWindow : Window
+    public partial class FunctionProduct : Window
     {
-        public DefaultDirectorWindow()
+        public FunctionProduct()
         {
             InitializeComponent();
-            DirectorFrame.Content = new AddProductPage();
+            ProductFrame.Content = new AddProductPage();
         }
     }
 }

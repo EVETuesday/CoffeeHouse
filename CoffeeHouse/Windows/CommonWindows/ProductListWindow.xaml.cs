@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static CoffeeHouse.ClassHelper.EFClass;
+using static CoffeeHouse.ClassHelper.AuthUserClass;
+using CoffeeHouse.Windows.ManagerWindows;
 
 namespace CoffeeHouse.Windows.CommonWindows
 {
@@ -25,6 +27,10 @@ namespace CoffeeHouse.Windows.CommonWindows
         public ProductListWindow()
         {
             InitializeComponent();
+            if (authEmploee.IDPost!=1)
+            {
+                btnAddProduct.Visibility = Visibility.Collapsed;
+            }            
             GetProduct();
         }
         private void GetProduct()
@@ -32,6 +38,13 @@ namespace CoffeeHouse.Windows.CommonWindows
             List<Stuff> stuffList = new List<Stuff>();
             stuffList = EFClass.Context.Stuff.ToList();
             LvProductList.ItemsSource= stuffList;
+        }
+
+        private void btnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            FunctionProduct functionProduct = new FunctionProduct();
+            functionProduct.Show();
+            Close();
         }
     }
 }

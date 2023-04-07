@@ -1,5 +1,5 @@
 ﻿using CoffeeHouse.ClassHelper;
-using CoffeeHouse.Windows.Director;
+using CoffeeHouse.Windows.ManagerWindows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static CoffeeHouse.ClassHelper.EFClass;
+using static CoffeeHouse.ClassHelper.AuthUserClass;
 
 namespace CoffeeHouse.Windows.CommonWindows
 {
@@ -37,11 +38,12 @@ namespace CoffeeHouse.Windows.CommonWindows
 
         private void BtnGo_Click(object sender, RoutedEventArgs e)
         {
-            var OneGuest = EFClass.Context.Guest.ToList().Where(i=>i.Login==TbLogin.Text && i.Password==TbPassword.Password).FirstOrDefault();
-            if (OneGuest!=null)
+            var OneEmploee = EFClass.Context.Emploee.ToList().Where(i=>i.Login==TbLogin.Text && i.Password==TbPassword.Password).FirstOrDefault();
+            if (OneEmploee != null)
             {
-                DefaultDirectorWindow defaultDirectorWindow = new DefaultDirectorWindow();
-                defaultDirectorWindow.Show();
+                authEmploee = OneEmploee;
+                DefaultManagerWindow defaultManagerWindow = new DefaultManagerWindow();
+                defaultManagerWindow.Show();
                 Close();
             }
             else
