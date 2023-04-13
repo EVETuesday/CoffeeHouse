@@ -196,10 +196,16 @@
     <Compile Include="Windows\CommonWindows\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\DirectorWondows\EmploeeListWindow.xaml.cs">
+    <Compile Include="Windows\DirectorWindows\AddEmployeeWindow.xaml.cs">
+      <DependentUpon>AddEmployeeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DirectorWindows\ChangeEmployeeWindow.xaml.cs">
+      <DependentUpon>ChangeEmployeeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DirectorWindows\EmploeeListWindow.xaml.cs">
       <DependentUpon>EmploeeListWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\DirectorWondows\GuestListWindow.xaml.cs">
+    <Compile Include="Windows\DirectorWindows\GuestListWindow.xaml.cs">
       <DependentUpon>GuestListWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ManagerWindows\DefaultManagerWindow.xaml.cs">
@@ -276,11 +282,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\DirectorWondows\EmploeeListWindow.xaml">
+    <Page Include="Windows\DirectorWindows\AddEmployeeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\DirectorWondows\GuestListWindow.xaml">
+    <Page Include="Windows\DirectorWindows\ChangeEmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DirectorWindows\EmploeeListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DirectorWindows\GuestListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -362,6 +376,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resourses\Images\JpgFormat\8882812508_74-p-biryuzovii-fon-vertikalnii-79.jpg" />
+    <Resource Include="Resourses\Images\JpgFormat\1639700407_286-catherineasquithgallery-com-p-fon-golubo-rozovii-409.jpg" />
+    <Resource Include="Resourses\Images\JpgFormat\978f0a9d8a29737fad0afb03e5392fba.jpg" />
     <Resource Include="Resourses\Images\JpgFormat\1613019026_103-p-abstraktnii-fon-vektor-oranzhevii-146.jpg" />
     <Resource Include="Resourses\Images\JpgFormat\1613274694_179-p-sinii-fon-s-belim-ottenkom-223.jpg" />
     <Resource Include="Resourses\Images\PngFormat\1614724448_90-p-foni-dlya-logotipov-118.png" />

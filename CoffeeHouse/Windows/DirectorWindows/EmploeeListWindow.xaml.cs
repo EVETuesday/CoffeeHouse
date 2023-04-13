@@ -1,4 +1,6 @@
-﻿using CoffeeHouse.Windows.ManagerWindows;
+﻿using CoffeeHouse.DataBase;
+using CoffeeHouse.Windows.DirectorWindows;
+using CoffeeHouse.Windows.ManagerWindows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +38,28 @@ namespace CoffeeHouse.Windows.DirectorWondows
             DefaultManagerWindow defaultManagerWindow = new DefaultManagerWindow();
             defaultManagerWindow.Show();
             Close();
+        }
+
+        private void AddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            AddEmployeeWindow addEmployeeWindow = new AddEmployeeWindow();
+            addEmployeeWindow.Show();
+            Close();
+        }
+
+        private void ChangeEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            Emploee emploee = LvEmployeeList.SelectedValue as Emploee;
+            if (emploee!=null)
+            {
+                ChangeEmployeeWindow changeEmployeeWindow = new ChangeEmployeeWindow(emploee);
+                changeEmployeeWindow.Show();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Для изменения, выберете сотрудника");
+            }
         }
     }
 }
