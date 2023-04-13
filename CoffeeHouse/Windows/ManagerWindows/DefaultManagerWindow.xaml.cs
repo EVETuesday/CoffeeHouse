@@ -59,6 +59,7 @@ namespace CoffeeHouse.Windows.ManagerWindows
         {
             AutorizationWindow autorizationWindow = new AutorizationWindow();
             autorizationWindow.Show();
+            Close();
         }
     }
 }
