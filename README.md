@@ -164,3 +164,44 @@
 
 
 ![изображение](https://user-images.githubusercontent.com/114149936/231679918-3c2e0fb6-cba3-4750-bd59-f72c9cd14ca5.png)
+
+
+
+<b> Добавление и изменение работников</b>
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231763564-962431ed-d106-42fa-8e3d-8bcdd9b1a28f.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231764064-e45a2b70-a525-4ec4-aeba-3235783cafdb.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231764527-3a73c652-a16f-46b7-b0dd-8c6f16ce48d6.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231764692-8fc2aa37-691d-4a1d-bec9-b7ca00d4d657.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231764788-34c53f7c-0c80-4e01-955f-f304768743fb.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231764906-982eda87-5a57-452e-b6be-52d80644fc33.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231765139-288aed1c-167a-41ba-ab82-a915061eefa1.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231765245-0788127e-9701-4110-9d6b-542a49358513.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231765305-ec80963f-353b-493a-997e-d34f1a6e9447.png)
+
