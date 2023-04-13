@@ -135,3 +135,32 @@
 
 
 ![изображение](https://user-images.githubusercontent.com/114149936/230564003-70cca367-2983-4899-b665-d22937970c82.png)
+
+
+
+
+<b> Показ списка пользователей и работников</b>
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231679493-abf5ecb4-c1f9-4aa1-9dac-df6a1d9c6113.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231679407-660c86c8-ad39-4d0a-a41b-d3eee988c3c1.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231679707-5f9ceb0e-53f6-4029-a88a-69b8a6993457.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231679759-bcac14ac-8088-4153-9d43-b32a20d2e61f.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231679865-fdcd54a1-ab71-470f-a61f-7a36f1ee4462.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/231679918-3c2e0fb6-cba3-4750-bd59-f72c9cd14ca5.png)
