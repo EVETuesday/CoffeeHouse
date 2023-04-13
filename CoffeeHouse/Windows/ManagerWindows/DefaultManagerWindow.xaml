@@ -17,13 +17,23 @@
                    Margin="10"
                    Background="#FFA8DCA6"
                    Height="40"
-                   Width="200"
+                   Width="400"
                    Style="{DynamicResource ButtonStyleRedius}"
                    Foreground="#FFFCFF00"
                    VerticalAlignment="Top"
                    FontSize="15"/>
-        
-        
+        <Button x:Name="btnBack"
+                Height="20"
+                Width="20"
+                Background="#FF505050"
+                BorderBrush="White"
+                Foreground="White"
+                Content="◄"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="3" Click="btnBack_Click"/>
+
+
         <StackPanel HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     Margin="40 0 0 0">
@@ -47,7 +57,7 @@
                 Foreground="White"
                 Content="Список работников"
                 BorderThickness="2"
-                Margin="0 0 0 10"
+                Margin="0 0 0 10" Click="btnEmployeeList_Click"
                 />
             <Button x:Name="btnGuestList"
                 Height="50"
@@ -58,7 +68,7 @@
                 Foreground="White"
                 Content="Список гостей"
                 BorderThickness="2"
-                Margin="0 0 0 10"
+                Margin="0 0 0 10" Click="btnGuestList_Click"
                 />
         </StackPanel>
         

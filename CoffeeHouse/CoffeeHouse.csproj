@@ -196,6 +196,12 @@
     <Compile Include="Windows\CommonWindows\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DirectorWondows\EmploeeListWindow.xaml.cs">
+      <DependentUpon>EmploeeListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DirectorWondows\GuestListWindow.xaml.cs">
+      <DependentUpon>GuestListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ManagerWindows\DefaultManagerWindow.xaml.cs">
       <DependentUpon>DefaultManagerWindow.xaml</DependentUpon>
     </Compile>
@@ -267,6 +273,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\CommonWindows\RegistrationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DirectorWondows\EmploeeListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DirectorWondows\GuestListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -348,6 +362,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resourses\Images\JpgFormat\1613019026_103-p-abstraktnii-fon-vektor-oranzhevii-146.jpg" />
+    <Resource Include="Resourses\Images\JpgFormat\1613274694_179-p-sinii-fon-s-belim-ottenkom-223.jpg" />
     <Resource Include="Resourses\Images\PngFormat\1614724448_90-p-foni-dlya-logotipov-118.png" />
     <Resource Include="Resourses\Images\JpgFormat\stuff.jpg" />
     <Resource Include="Resourses\Images\JpgFormat\1643206050_60-phonoteka-org-p-fon-iz-dereva-70.jpg" />

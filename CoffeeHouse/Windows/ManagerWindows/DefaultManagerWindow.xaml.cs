@@ -1,5 +1,6 @@
 ﻿using CoffeeHouse.ClassHelper;
 using CoffeeHouse.Windows.CommonWindows;
+using CoffeeHouse.Windows.DirectorWondows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,11 @@ namespace CoffeeHouse.Windows.ManagerWindows
         {
             InitializeComponent();
             tbHeaderUser.Content = authEmploee.FullName + " | " + authEmploee.Post.Title;
+            if (authEmploee.IDPost==2)
+            {
+                btnEmployeeList.IsEnabled = false;
+                btnGuestList.IsEnabled = false;
+            }
         }
 
         private void btnProductList_Click(object sender, RoutedEventArgs e)
@@ -33,6 +39,26 @@ namespace CoffeeHouse.Windows.ManagerWindows
             ProductListWindow productListWindow = new ProductListWindow();
             productListWindow.Show();
             Close();
+        }
+
+        private void btnEmployeeList_Click(object sender, RoutedEventArgs e)
+        {
+            EmploeeListWindow emploeeListWindow = new EmploeeListWindow();
+            emploeeListWindow.Show();
+            Close();
+        }
+
+        private void btnGuestList_Click(object sender, RoutedEventArgs e)
+        {
+            GuestListWindow guestListWindow = new GuestListWindow();
+            guestListWindow.Show();
+            Close();
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            AutorizationWindow autorizationWindow = new AutorizationWindow();
+            autorizationWindow.Show();
         }
     }
 }

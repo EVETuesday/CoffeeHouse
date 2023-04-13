@@ -46,5 +46,12 @@ namespace CoffeeHouse.Windows.CommonWindows
             functionProduct.Show();
             Close();
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            DefaultManagerWindow defaultManagerWindow = new DefaultManagerWindow();
+            defaultManagerWindow.Show();
+            Close();
+        }
     }
 }

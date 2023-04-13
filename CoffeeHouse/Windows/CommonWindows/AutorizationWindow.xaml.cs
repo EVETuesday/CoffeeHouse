@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static CoffeeHouse.ClassHelper.EFClass;
 using static CoffeeHouse.ClassHelper.AuthUserClass;
+using CoffeeHouse.Windows.ClientWindows;
 
 namespace CoffeeHouse.Windows.CommonWindows
 {
@@ -39,6 +40,7 @@ namespace CoffeeHouse.Windows.CommonWindows
         private void BtnGo_Click(object sender, RoutedEventArgs e)
         {
             var OneEmploee = EFClass.Context.Emploee.ToList().Where(i=>i.Login==TbLogin.Text && i.Password==TbPassword.Password).FirstOrDefault();
+            var OneGuest = EFClass.Context.Guest.ToList().Where(i=>i.Login==TbLogin.Text && i.Password==TbPassword.Password).FirstOrDefault();
             if (OneEmploee != null)
             {
                 authEmploee = OneEmploee;
@@ -46,10 +48,19 @@ namespace CoffeeHouse.Windows.CommonWindows
                 defaultManagerWindow.Show();
                 Close();
             }
+            else if (OneGuest != null)
+            {
+                authGuest = OneGuest;
+                DefaultClientWindow defaultClientWindow = new DefaultClientWindow();
+                defaultClientWindow.Show();
+                Close();
+            }
             else
             {
                 MessageBox.Show("Пользователь не найден");
             }
+
+            
         }
 
         private void TbLogin_GotFocus(object sender, RoutedEventArgs e)
