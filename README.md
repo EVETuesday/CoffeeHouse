@@ -91,6 +91,8 @@
 
 
 
+
+
 <b> Вывод списока продуктов </b>
 
 
@@ -101,3 +103,35 @@
 
 
 ![изображение](https://user-images.githubusercontent.com/114149936/220126308-4e962c59-2730-43c1-98d7-735034dfc9cb.png)
+
+
+
+
+
+
+
+<b> Авторизация по ролям </b>
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/230563674-36ac8c42-eaf1-4ae4-8c40-34773727ddef.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/230563755-70632f86-c05f-4caf-a56b-086e25c182a3.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/230563809-c4069e0a-4e22-4ede-9eb8-542f75a5214c.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/230563870-630a2c36-6c9f-4c2e-8c56-24f6fca66049.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/230563938-f411b4b1-7688-43ec-86b4-7398357787fe.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/230564003-70cca367-2983-4899-b665-d22937970c82.png)
