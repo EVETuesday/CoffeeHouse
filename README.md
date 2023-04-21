@@ -205,3 +205,22 @@
 
 ![изображение](https://user-images.githubusercontent.com/114149936/231765305-ec80963f-353b-493a-997e-d34f1a6e9447.png)
 
+
+
+<b> Добавление товаров в корзину и изменение количества</b>
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/233645392-af82aa1b-80f0-4be6-ab68-0b34e55b7237.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/233645540-d0cf87a8-304e-4668-8b59-67c403e7d7f8.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/233645601-d7ef4163-eead-409e-9b62-31f98e08b7cd.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/233645663-4d4ca413-8f14-4978-8922-2d958cb007c1.png)
