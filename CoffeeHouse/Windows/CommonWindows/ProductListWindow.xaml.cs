@@ -15,7 +15,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static CoffeeHouse.ClassHelper.EFClass;
 using static CoffeeHouse.ClassHelper.AuthUserClass;
+using static CoffeeHouse.ClassHelper.CartClass;
 using CoffeeHouse.Windows.ManagerWindows;
+using CoffeeHouse.Windows.DirectorWindows;
+using CoffeeHouse.Windows.ClientWindows;
 
 namespace CoffeeHouse.Windows.CommonWindows
 {
@@ -30,6 +33,7 @@ namespace CoffeeHouse.Windows.CommonWindows
             if (authEmploee.IDPost!=1)
             {
                 btnAddProduct.Visibility = Visibility.Collapsed;
+                btnChangeProduct.Visibility = Visibility.Collapsed;
             }            
             GetProduct();
         }
@@ -42,8 +46,8 @@ namespace CoffeeHouse.Windows.CommonWindows
 
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-            FunctionProduct functionProduct = new FunctionProduct();
-            functionProduct.Show();
+            AddProductWindow addProductWindow = new AddProductWindow();
+            addProductWindow.Show();
             Close();
         }
 
@@ -52,6 +56,48 @@ namespace CoffeeHouse.Windows.CommonWindows
             DefaultManagerWindow defaultManagerWindow = new DefaultManagerWindow();
             defaultManagerWindow.Show();
             Close();
+        }
+
+        private void btnChangeProduct_Click(object sender, RoutedEventArgs e)
+        {
+            CartWindow cartWindow = new CartWindow();
+            cartWindow.Show();
+            Close();
+        }
+
+        private void btnGoToCart_Click(object sender, RoutedEventArgs e)
+        {
+            CartWindow cartWindow = new CartWindow();
+            cartWindow.Show();
+            Close();
+        }
+        private void btnAddToCart_Click(object sender, RoutedEventArgs e)
+        {
+            bool seek = true;
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            DataBase.Stuff selectedProduct = button.DataContext as DataBase.Stuff;
+
+            if (selectedProduct != null)
+            {
+                for (int i = 0; i < stuffsCart.Count; i++)
+                {
+                    if (stuffsCart[i]== selectedProduct)
+                    {
+                        stuffsCart[i].Quantity++;
+                        seek= false;
+                    }
+                }
+                if (seek)
+                {
+                    selectedProduct.Quantity = 1;
+                    stuffsCart.Add(selectedProduct);
+                }                
+            }
         }
     }
 }

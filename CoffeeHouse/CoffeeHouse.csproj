@@ -66,7 +66,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ClassHelper\AuthUserClass.cs" />
+    <Compile Include="ClassHelper\CartClass.cs" />
     <Compile Include="ClassHelper\EFClass.cs" />
+    <Compile Include="ClassHelper\DBPref\Stuff.cs" />
     <Compile Include="DataBase\Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -166,9 +168,6 @@
     <Compile Include="Pages\DirectorPages\ChangeManagerPage.xaml.cs">
       <DependentUpon>ChangeManagerPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\DirectorPages\ChangeProductPage.xaml.cs">
-      <DependentUpon>ChangeProductPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\DirectorPages\RemoveManagerPage.xaml.cs">
       <DependentUpon>RemoveManagerPage.xaml</DependentUpon>
     </Compile>
@@ -177,6 +176,9 @@
     </Compile>
     <Compile Include="Pages\DirectorPages\StatisticsPage.xaml.cs">
       <DependentUpon>StatisticsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CommonWindows\CartWindow.xaml.cs">
+      <DependentUpon>CartWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\CommonWindows\AutorizationWindow.xaml.cs">
       <DependentUpon>AutorizationWindow.xaml</DependentUpon>
@@ -199,6 +201,9 @@
     <Compile Include="Windows\DirectorWindows\AddEmployeeWindow.xaml.cs">
       <DependentUpon>AddEmployeeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DirectorWindows\AddProductWindow.xaml.cs">
+      <DependentUpon>AddProductWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\DirectorWindows\ChangeEmployeeWindow.xaml.cs">
       <DependentUpon>ChangeEmployeeWindow.xaml</DependentUpon>
     </Compile>
@@ -214,9 +219,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Windows\ManagerWindows\FunctionProduct.xaml.cs">
-      <DependentUpon>FunctionProduct.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\CommonPages\AddClientPage.xaml">
       <SubType>Designer</SubType>
@@ -242,10 +244,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\DirectorPages\ChangeProductPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\DirectorPages\RemoveManagerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -255,6 +253,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\DirectorPages\StatisticsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CommonWindows\CartWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -286,6 +288,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\DirectorWindows\AddProductWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\DirectorWindows\ChangeEmployeeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -299,10 +305,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ManagerWindows\DefaultManagerWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\ManagerWindows\FunctionProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

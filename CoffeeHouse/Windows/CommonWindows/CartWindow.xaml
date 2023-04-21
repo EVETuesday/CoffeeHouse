@@ -1,19 +1,19 @@
-﻿<Window x:Class="CoffeeHouse.Windows.CommonWindows.ProductListWindow"
+﻿<Window x:Class="CoffeeHouse.Windows.ClientWindows.CartWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CoffeeHouse.Windows.CommonWindows"
+        xmlns:local="clr-namespace:CoffeeHouse.Windows.ClientWindows"
         mc:Ignorable="d"
-        Title="ProductListWindow" Height="800" Width="1200"
+        Title="CartWindow" Height="800" Width="1200"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="\Resourses\Images\JpgFormat\stuff.jpg"/>
         </Grid.Background>
-        
-        
-        
+
+
+
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
@@ -61,7 +61,7 @@
                         Width="200"
                         Height="250">
                         <StackPanel>
-                            
+
                             <StackPanel>
                                 <Image Height="170"
                                        Width="200">
@@ -90,13 +90,28 @@
                                            FontWeight="Bold"
                                            Margin="10 0 0 0"/>
                             </StackPanel>
-                            <StackPanel Margin="5 5 0 0">
-                            <Button x:Name="btnAddToCart"
+                            <StackPanel Margin="15 5 0 0" Orientation="Horizontal">
+                                <TextBlock x:Name="tbQuantityStuff"
+                                            Height="30"
+                                    Width="30"
+                                    HorizontalAlignment="Left"
+                                    Text="{Binding Quantity}"
+                                    FontSize="18"/>
+                                <Button x:Name="btnRemoveOnCart"
                                     Height="30"
                                     Width="30"
                                     HorizontalAlignment="Left"
+                                    Content="-"
+                                    FontSize="20" Click="btnRemoveOnCart_Click"/>
+
+                                <Button x:Name="btnAddOnCart"
+                                    Height="30"
+                                    Width="30"
+                                        Margin="5 0 0 0"
+                                    HorizontalAlignment="Left"
                                     Content="+"
-                                    FontSize="20" Click="btnAddToCart_Click"/>
+                                    FontSize="20" Click="btnAddOnCart_Click"/>
+
                             </StackPanel>
 
                         </StackPanel>
@@ -105,35 +120,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
-        <Button x:Name="btnAddProduct"
-                Grid.Row="3"
-                Width="50"
-                HorizontalAlignment="Right"
-                FontSize="40"
-                Margin="0 0 30 0"
-                Content="+"
-                Padding="0 -8 0 0"
-                Click="btnAddProduct_Click"/>
-
-        <Button x:Name="btnChangeProduct"
-                Grid.Row="3"
-                Width="50"
-                HorizontalAlignment="Right"
-                FontSize="20"
-                Margin="0 0 100 0"
-                Content="✎"
-                Padding="0 0 0 0"
-                Click="btnChangeProduct_Click"/>
-
-        <Button x:Name="btnGoToCart"
-                Grid.Row="3"
-                Width="100"
-                HorizontalAlignment="Left"
-                FontSize="20"
-                Margin="10 0 0 0"
-                Content="В корзину"
-                Padding="0 0 0 0"
-                Click="btnGoToCart_Click"/>
     </Grid>
 </Window>

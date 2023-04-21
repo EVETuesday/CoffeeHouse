@@ -1,0 +1,108 @@
+﻿<Window x:Class="CoffeeHouse.Windows.DirectorWindows.AddProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeeHouse.Windows.DirectorWindows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="AddProductWindow" Height="700" Width="400">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\EVE\source\repos\CoffeeHouse\CoffeeHouse\Resourses\Images\JpgFormat\1614414667_11-p-chashka-kofe-na-temnom-fone-17.jpg"/>
+        </Grid.Background>
+        <StackPanel Orientation="Vertical" 
+                    Margin="40 0 40 0 " >
+
+
+            <TextBlock Text="Добавление товара" 
+                       FontSize="30" 
+                       TextAlignment="Center" 
+                       Foreground="Black"/>
+
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    Width="200"
+                    Height="200">
+                <Image x:Name="ImgProduct"/>
+            </Border>
+
+            <Button x:Name="BtnChooseImage" 
+                    Content="Выбрать фото"
+                    Width="200"
+                    Height="40"
+                    Margin="5"
+                    Click="BtnChooseImage_Click"/>
+
+            <TextBlock Height="30"
+                       Text="*Введите название товара"
+                       FontSize="20"
+                       TextAlignment="Left"
+                       Foreground="White"
+                       Margin="0 0 0 0 "/>
+
+            <TextBox x:Name="TbNameProduct"
+                     Height="30"
+                     FontSize="20"
+                     TextAlignment="Left"
+                     Foreground="Black"/>
+            <TextBlock
+                Height="30"
+                FontSize="20"
+                TextAlignment="Left"
+                Foreground="White"
+                Text="*Введите цену товара"
+                Margin="0 0 0 0"
+                />
+
+            <TextBox
+                x:Name="TbPrice"
+                Height="30"
+                FontSize="20"
+                Foreground="Black"/>
+
+            <TextBlock
+                Height="30"
+                FontSize="20"
+                TextAlignment="Left"
+                Foreground="White"
+                Text="Введите Срок годности товара"
+                Margin="0 0 0 0"
+                />
+
+            <TextBox
+                x:Name="TbExpiration"
+                Height="30"
+                FontSize="20"
+                Foreground="Black"/>
+
+            <TextBlock Height="30"
+                       Text="*Выберите тип товара"
+                       FontSize="20"
+                       TextAlignment="Left"
+                       Foreground="White"
+                       Margin="0 0 0 0 "/>
+
+            <ComboBox x:Name="CMBTypeProduct"
+                      SelectedIndex="1"
+                     Height="30"
+                     FontSize="20"                     
+                     Foreground="Black"/>
+
+
+            <Button x:Name="BtnAdd"
+                    Height="50"
+                    FontSize="20"
+                    Width="200"
+                    Margin="0 40 0 0 " 
+                    HorizontalAlignment="Center"
+                    Content="Добавить"
+                    Click="BtnAdd_Click">
+
+            </Button>
+
+
+
+        </StackPanel>
+    </Grid>
+</Window>
