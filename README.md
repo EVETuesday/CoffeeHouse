@@ -224,3 +224,21 @@
 
 
 ![изображение](https://user-images.githubusercontent.com/114149936/233645663-4d4ca413-8f14-4978-8922-2d958cb007c1.png)
+
+
+
+
+<b> Реализация продажи</b>
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/233957344-6ed0453c-55b8-47ff-8b91-e63fa7ac56e5.png)
+
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/233957497-e35733fe-7896-430d-9128-4e3c95b6d13d.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/233958184-dccf9037-299c-44b8-b84b-51aa8484272f.png)
