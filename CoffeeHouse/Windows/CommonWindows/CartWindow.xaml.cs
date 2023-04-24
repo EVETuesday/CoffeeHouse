@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static CoffeeHouse.ClassHelper.CartClass;
+using static CoffeeHouse.ClassHelper.EFClass;
 
 namespace CoffeeHouse.Windows.ClientWindows
 {
@@ -29,6 +30,10 @@ namespace CoffeeHouse.Windows.ClientWindows
         void GetProductList()
         {
             LvProductList.ItemsSource = stuffsCart.ToList();
+            foreach (var item in stuffsCart)
+            {
+                tbAllCost.Text = Convert.ToString( Convert.ToDouble(tbAllCost.Text) + Convert.ToDouble( item.Price));
+            }
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -83,6 +88,43 @@ namespace CoffeeHouse.Windows.ClientWindows
                 stuffsCart.Insert(o, selectedProduct);
             }
             GetProductList();
+        }
+
+        private void btnPay_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+                DataBase.Check check = new DataBase.Check();
+                check.IDEmployee = ClassHelper.AuthUserClass.authEmploee.IDEmploee;
+                check.IDGuest = 1;
+                check.Date= DateTime.Now;
+                if (check != null)
+                {
+                    Context.Check.Add(check);
+                    Context.SaveChanges();
+                }
+
+
+                foreach (var item in stuffsCart)
+                {
+                    DataBase.StuffList stuffList = new DataBase.StuffList();
+                    stuffList.IDStuff = item.IDStuff;
+                    stuffList.Quantity = item.Quantity;
+                    stuffList.IDCheck = Context.Check.ToList().LastOrDefault().IDCheck;
+                    Context.StuffList.Add(stuffList);
+                    Context.SaveChanges();
+                }
+                MessageBox.Show("Продукты успешно добавлены");
+                ProductListWindow productListWindow = new ProductListWindow();
+                productListWindow.Show();
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("Возникла неизвесная ошибка");
+            }
+
         }
     }
 }

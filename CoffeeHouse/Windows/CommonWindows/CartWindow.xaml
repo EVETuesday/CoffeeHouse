@@ -120,5 +120,32 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Button x:Name="btnPay"
+                Grid.Row="3"
+                Width="200"
+                Content="Купить"
+                FontSize="30"
+                HorizontalAlignment="Left"
+                Margin="30 0 0 0" Click="btnPay_Click"/>
+
+        <StackPanel HorizontalAlignment="Right" Grid.Row="3" Orientation="Horizontal">
+            <TextBlock                  
+                Width="200"
+                Text="Цена:"
+                TextAlignment="Right"
+                Padding="0 0 20 0"
+                FontSize="30"
+                   />
+            <TextBlock x:Name="tbAllCost"                   
+                Width="200"
+                Text="0"                
+                FontSize="30"
+                   />
+            
+        </StackPanel>
+        
+
+
     </Grid>
 </Window>
