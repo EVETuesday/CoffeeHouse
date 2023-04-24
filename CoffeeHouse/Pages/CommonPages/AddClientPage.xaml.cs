@@ -96,6 +96,11 @@ namespace CoffeeHouse.Pages.CommonPages
                 a.Text = tbWord;
             }
         }
+
+        private void BtnToAuth_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 //

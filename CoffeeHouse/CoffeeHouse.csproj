@@ -207,6 +207,12 @@
     <Compile Include="Windows\DirectorWindows\ChangeEmployeeWindow.xaml.cs">
       <DependentUpon>ChangeEmployeeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DirectorWindows\ChangeStuffLineWindow.xaml.cs">
+      <DependentUpon>ChangeStuffLineWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DirectorWindows\ChangeStuffWindow.xaml.cs">
+      <DependentUpon>ChangeStuffWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\DirectorWindows\EmploeeListWindow.xaml.cs">
       <DependentUpon>EmploeeListWindow.xaml</DependentUpon>
     </Compile>
@@ -293,6 +299,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\DirectorWindows\ChangeEmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DirectorWindows\ChangeStuffLineWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DirectorWindows\ChangeStuffWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

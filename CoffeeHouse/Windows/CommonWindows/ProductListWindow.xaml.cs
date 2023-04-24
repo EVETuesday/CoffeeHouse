@@ -60,8 +60,8 @@ namespace CoffeeHouse.Windows.CommonWindows
 
         private void btnChangeProduct_Click(object sender, RoutedEventArgs e)
         {
-            CartWindow cartWindow = new CartWindow();
-            cartWindow.Show();
+            ChangeStuffWindow changeStuffWindow = new ChangeStuffWindow();
+            changeStuffWindow.Show();
             Close();
         }
 

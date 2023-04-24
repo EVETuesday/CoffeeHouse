@@ -30,9 +30,10 @@ namespace CoffeeHouse.Windows.ClientWindows
         void GetProductList()
         {
             LvProductList.ItemsSource = stuffsCart.ToList();
+            tbAllCost.Text = "0";
             foreach (var item in stuffsCart)
             {
-                tbAllCost.Text = Convert.ToString( Convert.ToDouble(tbAllCost.Text) + Convert.ToDouble( item.Price));
+                tbAllCost.Text = Convert.ToString( Convert.ToDouble(tbAllCost.Text) + Convert.ToDouble( item.Price)*item.Quantity);
             }
         }
 
