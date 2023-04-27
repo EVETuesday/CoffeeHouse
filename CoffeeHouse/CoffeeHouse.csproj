@@ -141,6 +141,9 @@
     <Compile Include="DataBase\VW_LevelDiscountGuest.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataBase\vw_Orders.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\VW_TheBiggestGuest.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -212,6 +215,9 @@
     </Compile>
     <Compile Include="Windows\DirectorWindows\ChangeStuffWindow.xaml.cs">
       <DependentUpon>ChangeStuffWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DirectorWindows\CheckOrderWindow.xaml.cs">
+      <DependentUpon>CheckOrderWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\DirectorWindows\EmploeeListWindow.xaml.cs">
       <DependentUpon>EmploeeListWindow.xaml</DependentUpon>
@@ -310,6 +316,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\DirectorWindows\CheckOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\DirectorWindows\EmploeeListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -392,6 +402,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resourses\Images\JpgFormat\iuytr.jpg" />
     <Resource Include="Resourses\Images\JpgFormat\8882812508_74-p-biryuzovii-fon-vertikalnii-79.jpg" />
     <Resource Include="Resourses\Images\JpgFormat\1639700407_286-catherineasquithgallery-com-p-fon-golubo-rozovii-409.jpg" />
     <Resource Include="Resourses\Images\JpgFormat\978f0a9d8a29737fad0afb03e5392fba.jpg" />

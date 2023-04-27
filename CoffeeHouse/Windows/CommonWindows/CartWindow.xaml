@@ -32,7 +32,7 @@
                 VerticalAlignment="Top"
                 Margin="3" Click="btnBack_Click"/>
 
-        <TextBlock Text="Список товаров"
+        <TextBlock Text="Корзина"
                    HorizontalAlignment="Center"
                    FontSize="25"
                    FontWeight="Bold"/>

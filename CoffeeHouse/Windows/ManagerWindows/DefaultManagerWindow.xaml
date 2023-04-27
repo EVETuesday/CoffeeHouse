@@ -71,7 +71,26 @@
                 Margin="0 0 0 10" Click="btnGuestList_Click"
                 />
         </StackPanel>
-        
+
+
+
+        <StackPanel HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="300 0 0 0">
+            <Button x:Name="btnOrders"
+                Height="50"
+                Width="200"
+                Style="{DynamicResource ButtonStyleRedius}"
+                Background="#FF2FB0E5"
+                BorderBrush="#FF002BFF"
+                Foreground="White"
+                Content="Продажи"
+                BorderThickness="2"
+                Margin="0 0 0 10"
+                    Click="btnOrders_Click"
+                />
+        </StackPanel>
+
 
     </Grid>
 </Window>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище KoffeeHouseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище KoffeeHouseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="IDCategory" />
@@ -166,6 +166,23 @@
           <Property Name="Скидочный код" Type="char" MaxLength="6" Nullable="false" />
           <Property Name="Баланс балов" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Уровень скидки" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "KoffeeHouse.dbo.vw_Orders" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="vw_Orders">
+          <Key>
+            <PropertyRef Name="FullName" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Title" />
+            <PropertyRef Name="Quantity" />
+          </Key>
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="Cost" Type="decimal" Precision="21" Scale="2" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "KoffeeHouse.dbo.VW_TheBiggestGuest" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
@@ -464,6 +481,16 @@
     [VW_LevelDiscountGuest].[Уровень скидки] AS [Уровень скидки]
     FROM [dbo].[VW_LevelDiscountGuest] AS [VW_LevelDiscountGuest]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="vw_Orders" EntityType="Self.vw_Orders" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_Orders].[FullName] AS [FullName], 
+    [vw_Orders].[Name] AS [Name], 
+    [vw_Orders].[Date] AS [Date], 
+    [vw_Orders].[Title] AS [Title], 
+    [vw_Orders].[Quantity] AS [Quantity], 
+    [vw_Orders].[Cost] AS [Cost]
+    FROM [dbo].[vw_Orders] AS [vw_Orders]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="VW_TheBiggestGuest" EntityType="Self.VW_TheBiggestGuest" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [VW_TheBiggestGuest].[Имя] AS [Имя], 
@@ -539,8 +566,7 @@
             <End Role="Supply" EntitySet="Supply" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KoffeeHouseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -950,7 +976,7 @@
             <End Role="Supply" EntitySet="Supply" />
           </AssociationSet>
           <FunctionImport Name="UDF_GetLevelGuest" IsComposable="true" ReturnType="Collection(KoffeeHouseModel.UDF_GetLevelGuest_Result)">
-            <Parameter Name="Lvl" Mode="In" Type="Int32" />
+          <Parameter Name="Lvl" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="UDF_SupplyDate" IsComposable="true" ReturnType="Collection(KoffeeHouseModel.UDF_SupplyDate_Result)">
             <Parameter Name="sDate" Mode="In" Type="DateTime" />
@@ -992,6 +1018,7 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="vw_Orders" EntityType="KoffeeHouseModel.vw_Orders" />
         </EntityContainer>
         <ComplexType Name="PR_getStuffExpirationDate_Result">
           <Property Type="String" Name="Title" Nullable="false" MaxLength="50" />
@@ -1018,6 +1045,21 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="vw_Orders">
+          <Key>
+            <PropertyRef Name="FullName" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Title" />
+            <PropertyRef Name="Quantity" />
+          </Key>
+          <Property Name="FullName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Cost" Type="Decimal" Precision="21" Scale="2" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1288,6 +1330,18 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище KoffeeHouseModel.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище KoffeeHouseModel.sp_upgraddiagrams" />
+          <EntitySetMapping Name="vw_Orders">
+            <EntityTypeMapping TypeName="KoffeeHouseModel.vw_Orders">
+              <MappingFragment StoreEntitySet="vw_Orders">
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

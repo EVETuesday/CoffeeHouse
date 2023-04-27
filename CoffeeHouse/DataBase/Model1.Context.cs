@@ -43,6 +43,7 @@ namespace CoffeeHouse.DataBase
         public virtual DbSet<VW_LevelDiscountGuest> VW_LevelDiscountGuest { get; set; }
         public virtual DbSet<VW_TheBiggestGuest> VW_TheBiggestGuest { get; set; }
         public virtual DbSet<VW_WorkShiftEmploee> VW_WorkShiftEmploee { get; set; }
+        public virtual DbSet<vw_Orders> vw_Orders { get; set; }
     
         [DbFunction("Entities3", "UDF_GetLevelGuest")]
         public virtual IQueryable<UDF_GetLevelGuest_Result> UDF_GetLevelGuest(Nullable<int> lvl)
