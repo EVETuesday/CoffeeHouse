@@ -242,3 +242,27 @@
 
 
 ![изображение](https://user-images.githubusercontent.com/114149936/233958184-dccf9037-299c-44b8-b84b-51aa8484272f.png)
+
+
+
+<b> Список продаж</b>
+
+
+
+![image](https://user-images.githubusercontent.com/114149936/234796429-46a8531b-fb81-4589-b476-34f24721d051.png)
+
+
+
+![image](https://user-images.githubusercontent.com/114149936/234796555-b7743fb3-1e1c-4b16-b6a2-78564f97afcb.png)
+
+
+
+![image](https://user-images.githubusercontent.com/114149936/234796773-90d0e95c-47ee-4240-86ce-c7779696dd03.png)
+
+
+
+![image](https://user-images.githubusercontent.com/114149936/234804223-7c789dd3-75d0-409e-a716-c7c57ddbaf24.png)
+
+
+
+![image](https://user-images.githubusercontent.com/114149936/234804507-1bb3cceb-dc02-46c0-afdd-79a93475acb6.png)
