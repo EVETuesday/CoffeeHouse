@@ -27,6 +27,7 @@ namespace CoffeeHouse.Windows.DirectorWindows
     {
         DataBase.Stuff stuffL;
         private string pathPhoto = null;
+        byte[] imgtemp= null;
         public ChangeStuffLineWindow(DataBase.Stuff stuff)
         {
             
@@ -51,6 +52,7 @@ namespace CoffeeHouse.Windows.DirectorWindows
             CMBTypeProduct.ItemsSource = ClassHelper.EFClass.Context.Category.ToList();
             CMBTypeProduct.DisplayMemberPath = "Title";
             CMBTypeProduct.SelectedItem = stuffL.Category;
+            imgtemp=stuffL.Image;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -98,7 +100,14 @@ namespace CoffeeHouse.Windows.DirectorWindows
             }
             else
             {
-                stuffL.Image = null;
+                if (imgtemp!=null)
+                {
+                    stuffL.Image = imgtemp;
+                }
+                else
+                {
+                    stuffL.Image = null;
+                }                
             }
 
             try

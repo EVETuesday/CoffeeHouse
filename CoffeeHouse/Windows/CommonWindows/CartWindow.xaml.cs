@@ -106,20 +106,31 @@ namespace CoffeeHouse.Windows.ClientWindows
                     Context.SaveChanges();
                 }
 
-
-                foreach (var item in stuffsCart)
+                if (stuffsCart.Count > 0)
                 {
-                    DataBase.StuffList stuffList = new DataBase.StuffList();
-                    stuffList.IDStuff = item.IDStuff;
-                    stuffList.Quantity = item.Quantity;
-                    stuffList.IDCheck = Context.Check.ToList().LastOrDefault().IDCheck;
-                    Context.StuffList.Add(stuffList);
-                    Context.SaveChanges();
+
+
+                    foreach (var item in stuffsCart)
+                    {
+                        DataBase.StuffList stuffList = new DataBase.StuffList();
+                        stuffList.IDStuff = item.IDStuff;
+                        stuffList.Quantity = item.Quantity;
+                        stuffList.IDCheck = Context.Check.ToList().LastOrDefault().IDCheck;
+                        Context.StuffList.Add(stuffList);
+                        Context.SaveChanges();
+                    }
+                    MessageBox.Show("Продукты успешно добавлены");
+                    ProductListWindow productListWindow = new ProductListWindow();
+                    productListWindow.Show();
+                    Close();
                 }
-                MessageBox.Show("Продукты успешно добавлены");
-                ProductListWindow productListWindow = new ProductListWindow();
-                productListWindow.Show();
-                Close();
+                else
+                {
+                    MessageBox.Show("В корзине нет продукции");
+                    ProductListWindow productListWindow = new ProductListWindow();
+                    productListWindow.Show();
+                    Close();
+                }
             }
             catch
             {

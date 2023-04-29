@@ -104,17 +104,21 @@ namespace CoffeeHouse.Windows.DirectorWindows
 
         private void btnDateSearch_Click(object sender, RoutedEventArgs e)
         {
-            if (dpFirst.SelectedDate.Value!=null && dpNext.SelectedDate.Value != null)
+            try
             {
                 if (dpNext.SelectedDate.Value < dpFirst.SelectedDate.Value)
                 {
                     DatePicker datePicker = new DatePicker();
-                    datePicker.SelectedDate=dpNext.SelectedDate;
-                    dpNext.SelectedDate=dpNext.SelectedDate;
-                    dpFirst.SelectedDate=datePicker.SelectedDate;
+                    datePicker.SelectedDate = dpNext.SelectedDate;
+                    dpNext.SelectedDate = dpNext.SelectedDate;
+                    dpFirst.SelectedDate = datePicker.SelectedDate;
                 }
 
                 getOrders(dpFirst, dpNext);
+            }
+            catch
+            {
+                getOrders();
             }
         }
 
