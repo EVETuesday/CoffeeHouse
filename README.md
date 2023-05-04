@@ -266,3 +266,20 @@
 
 
 ![image](https://user-images.githubusercontent.com/114149936/234804507-1bb3cceb-dc02-46c0-afdd-79a93475acb6.png)
+
+
+
+<b> Скидка каждый 4 четверг месяца в 4% на всю продукцию</b>
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/236198833-441be01b-68b6-4456-816b-682dbdcbb371.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/236198905-b3533cf3-d88c-42d4-afa4-8571bb52dc3f.png)
+
+
+
+![изображение](https://user-images.githubusercontent.com/114149936/236198964-4ef59d0d-5907-4803-9e70-057a8b9fe7f7.png)
+
