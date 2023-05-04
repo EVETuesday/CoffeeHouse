@@ -1,6 +1,7 @@
 ﻿using CoffeeHouse.Windows.CommonWindows;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,8 @@ namespace CoffeeHouse.Windows.ClientWindows
         {
             InitializeComponent();
             GetProductList();
+            DateTime dateTime= new DateTime(2023,5,25);
+            DiscountTHU(/*DateTime.Now*/dateTime, Convert.ToDouble(tbAllCost.Text));
         }
         void GetProductList()
         {
@@ -36,6 +39,27 @@ namespace CoffeeHouse.Windows.ClientWindows
                 tbAllCost.Text = Convert.ToString( Convert.ToDouble(tbAllCost.Text) + Convert.ToDouble( item.Price)*item.Quantity);
             }
         }
+
+        void DiscountTHU(DateTime dateTime, double Cost)
+        {
+            double day = dateTime.Day;
+            string dayOfWeek = dateTime.DayOfWeek.ToString();
+
+            if ((day/7)>0 && dayOfWeek=="Thursday")
+            {
+                tbCostText.Text = "Цена с учётом скидки";
+                tbCostText.Width= 400;
+                for (int i = 0; i < stuffsCart.Count; i++)
+                {
+                    stuffsCart[i].Price -= Convert.ToDecimal( Convert.ToDouble(stuffsCart[i].Price) * 0.04);
+                }
+                GetProductList();
+            }
+
+
+            
+        }
+
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
@@ -120,6 +144,7 @@ namespace CoffeeHouse.Windows.ClientWindows
                         Context.SaveChanges();
                     }
                     MessageBox.Show("Продукты успешно добавлены");
+
                     ProductListWindow productListWindow = new ProductListWindow();
                     productListWindow.Show();
                     Close();
