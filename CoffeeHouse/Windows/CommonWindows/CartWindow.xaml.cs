@@ -24,14 +24,11 @@ namespace CoffeeHouse.Windows.ClientWindows
     public partial class CartWindow : Window
     {
         bool PriseOff= false;
-        ObservableCollection<DataBase.Stuff> stuffs = new ObservableCollection<DataBase.Stuff>();
         public CartWindow()
         {
             InitializeComponent();
             GetProductList();
-            stuffs = stuffsCart;
-            DateTime dateTime= new DateTime(2023,5,25);
-            DiscountTHU(/*DateTime.Now*/dateTime, Convert.ToDouble(tbAllCost.Text));
+            DiscountTHU(DateTime.Now, Convert.ToDouble(tbAllCost.Text));
         }
         void GetProductList()
         {
