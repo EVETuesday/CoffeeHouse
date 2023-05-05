@@ -23,10 +23,13 @@ namespace CoffeeHouse.Windows.ClientWindows
     /// </summary>
     public partial class CartWindow : Window
     {
+        bool PriseOff= false;
+        ObservableCollection<DataBase.Stuff> stuffs = new ObservableCollection<DataBase.Stuff>();
         public CartWindow()
         {
             InitializeComponent();
             GetProductList();
+            stuffs = stuffsCart;
             DateTime dateTime= new DateTime(2023,5,25);
             DiscountTHU(/*DateTime.Now*/dateTime, Convert.ToDouble(tbAllCost.Text));
         }
@@ -40,7 +43,7 @@ namespace CoffeeHouse.Windows.ClientWindows
             }
         }
 
-        void DiscountTHU(DateTime dateTime, double Cost)
+        void DiscountTHU(DateTime dateTime, double Cst)
         {
             double day = dateTime.Day;
             string dayOfWeek = dateTime.DayOfWeek.ToString();
@@ -51,9 +54,10 @@ namespace CoffeeHouse.Windows.ClientWindows
                 tbCostText.Width= 400;
                 for (int i = 0; i < stuffsCart.Count; i++)
                 {
-                    stuffsCart[i].Price -= Convert.ToDecimal( Convert.ToDouble(stuffsCart[i].Price) * 0.04);
+                    stuffsCart[i].Price -= Convert.ToDecimal( Convert.ToDouble((stuffsCart[i].Price)) *0.04);
                 }
                 GetProductList();
+                PriseOff = true;
             }
 
 
@@ -145,6 +149,16 @@ namespace CoffeeHouse.Windows.ClientWindows
                     }
                     MessageBox.Show("Продукты успешно добавлены");
 
+
+                    if (PriseOff)
+                    {
+                        for (int i = 0; i < stuffsCart.Count; i++)
+                        {
+                            stuffsCart[i].Price += Convert.ToDecimal(Convert.ToDouble(((stuffsCart[i].Price))/96)*4);
+                        }
+                        Context.SaveChanges();
+                    }
+                    
                     ProductListWindow productListWindow = new ProductListWindow();
                     productListWindow.Show();
                     Close();
