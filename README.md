@@ -283,3 +283,27 @@
 
 ![изображение](https://user-images.githubusercontent.com/114149936/236198964-4ef59d0d-5907-4803-9e70-057a8b9fe7f7.png)
 
+
+
+<b> Тестирование метода скидки </b>
+
+
+  
+![изображение](https://github.com/EVETuesday/CoffeeHouse/assets/114149936/56de46d7-31de-4b10-a8ed-8cd00592b863)
+  
+
+  
+![изображение](https://github.com/EVETuesday/CoffeeHouse/assets/114149936/4078eff8-9c97-4f0d-8c95-d4afb9432679)
+
+
+
+![изображение](https://github.com/EVETuesday/CoffeeHouse/assets/114149936/a10e2173-59a7-4d42-8e75-59364135ff74)
+
+
+
+![изображение](https://github.com/EVETuesday/CoffeeHouse/assets/114149936/dd351434-b668-4247-8913-220145e3f8ce)
+
+
+
+![изображение](https://github.com/EVETuesday/CoffeeHouse/assets/114149936/5a95b68c-f9e0-41eb-b952-9947a08bd2f1)
+
