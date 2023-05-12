@@ -29,6 +29,7 @@ namespace CoffeeHouse.Windows.ClientWindows
             InitializeComponent();
             GetProductList();
             DiscountTHU(DateTime.Now, Convert.ToDouble(tbAllCost.Text));
+            //stuffsCart = DiscountTHU(DateTime.Now, tbAllCost.Text,stuffsCart);
         }
         void GetProductList()
         {
@@ -45,21 +46,40 @@ namespace CoffeeHouse.Windows.ClientWindows
             double day = dateTime.Day;
             string dayOfWeek = dateTime.DayOfWeek.ToString();
 
-            if ((day/7)>0 && dayOfWeek=="Thursday")
+
+            if ((day / 7) > 0 && dayOfWeek == "Thursday")
             {
                 tbCostText.Text = "Цена с учётом скидки";
-                tbCostText.Width= 400;
+                tbCostText.Width = 400;
                 for (int i = 0; i < stuffsCart.Count; i++)
                 {
-                    stuffsCart[i].Price -= Convert.ToDecimal( Convert.ToDouble((stuffsCart[i].Price)) *0.04);
+                    stuffsCart[i].Price -= Convert.ToDecimal(Convert.ToDouble((stuffsCart[i].Price)) * 0.04);
                 }
                 GetProductList();
                 PriseOff = true;
             }
-
-
-            
         }
+
+
+
+        //----------------StupidUnlessMethod
+
+        //public static ObservableCollection<DataBase.Stuff> DiscountTHU(DateTime dateTime, string Cst, ObservableCollection<DataBase.Stuff> startUnlessCollection)
+        //{
+        //    Double.TryParse(Cst, out double DCst) ;
+        //    double day = dateTime.Day;
+        //    string dayOfWeek = dateTime.DayOfWeek.ToString();
+        //    ObservableCollection<DataBase.Stuff> UslessCollection = startUnlessCollection;
+
+        //    if ((day / 7) > 0 && dayOfWeek == "Thursday")
+        //    {
+        //        for (int i = 0; i < startUnlessCollection.Count; i++)
+        //        {
+        //            UslessCollection[i].Price -= Convert.ToDecimal(Convert.ToDouble((UslessCollection[i].Price)) * 0.04);
+        //        }
+        //    }
+        //    return UslessCollection;
+        //}
 
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
