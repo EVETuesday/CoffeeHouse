@@ -28,7 +28,16 @@ namespace CoffeeHouse.Windows.ClientWindows
         {
             InitializeComponent();
             GetProductList();
-            DiscountTHU(DateTime.Now, Convert.ToDouble(tbAllCost.Text));
+
+
+
+            //DiscountTHU(DateTime.Now, Convert.ToDouble(tbAllCost.Text));
+
+
+            DiscountTHU(new DateTime(2023,5,11 ), Convert.ToDouble(tbAllCost.Text));
+
+
+
             //stuffsCart = DiscountTHU(DateTime.Now, tbAllCost.Text,stuffsCart);
         }
         void GetProductList()
