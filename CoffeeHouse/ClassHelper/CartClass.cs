@@ -12,3 +12,4 @@ namespace CoffeeHouse.ClassHelper
         public static ObservableCollection<DataBase.Stuff> stuffsCart = new ObservableCollection<DataBase.Stuff>();
     }
 }
+//Code by writen Kirillin MP
