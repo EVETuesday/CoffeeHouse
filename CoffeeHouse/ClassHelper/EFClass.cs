@@ -12,3 +12,4 @@ namespace CoffeeHouse.ClassHelper
         public static Entities3 Context { get;} = new Entities3();
     }
 }
+//Code by writen Kirillin MP
