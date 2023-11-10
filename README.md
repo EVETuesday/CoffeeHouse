@@ -307,3 +307,9 @@
 
 ![изображение](https://github.com/EVETuesday/CoffeeHouse/assets/114149936/5a95b68c-f9e0-41eb-b952-9947a08bd2f1)
 
+
+
+
+
+
+
